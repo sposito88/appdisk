@@ -11,19 +11,33 @@ Um analisador de uso de disco interativo com interface TUI (Terminal User Interf
 - 📈 Barra de rolagem visual
 - 🔍 Suporte a arquivos ocultos
 - 💾 Exportação para JSON
+- 🗑️ Deleção segura de arquivos e diretórios
 
 ## Instalação
 
-### Via Cargo (Recomendado)
-
-Se você tem o Rust instalado:
-
+### Via Pacote Debian (.deb) - Recomendado para Ubuntu/Debian
 ```bash
+# Baixe o pacote mais recente
+wget https://github.com/sposito88/appdisk/releases/latest/download/appdisk_0.1.0_amd64.deb
+
+# Instale o pacote
+sudo dpkg -i appdisk_0.1.0_amd64.deb
+
+# Se houver dependências faltando, execute:
+sudo apt-get install -f
+```
+
+### Via Cargo
+```bash
+# Instale o Rust se ainda não tiver
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Instale o appdisk
 cargo install appdisk
 ```
 
 ### Via Script de Instalação
-
+```bash
 # Clone o repositório
 git clone https://github.com/sposito88/appdisk.git
 cd appdisk
@@ -31,41 +45,29 @@ cd appdisk
 # Execute o script de instalação
 chmod +x install.sh
 ./install.sh
+```
 
 ### Via Docker
-
 ```bash
 # Construir a imagem
 docker build -t appdisk .
 
-# Executar
-docker run -it --rm -v /path/to/analyze:/data appdisk /data
-```
-
-### Via Pacote Debian (.deb)
-
-Para sistemas baseados em Debian/Ubuntu:
-
-```bash
-# Baixe o pacote mais recente das releases
-wget https://github.com/sposito88/appdisk/releases/latest/download/appdisk_0.1.0_amd64.deb
-
-# Instale o pacote
-sudo dpkg -i appdisk_0.1.0_amd64.deb
+# Executar analisando um diretório específico
+docker run -it --rm -v /caminho/para/analisar:/data appdisk /data
 ```
 
 ## Uso
 
 ### Comando Básico
-
 ```bash
-appdisk [DIRETÓRIO]
+# Analisa o diretório atual
+appdisk
+
+# Analisa um diretório específico
+appdisk /caminho/do/diretorio
 ```
 
-Se nenhum diretório for especificado, o diretório atual será analisado.
-
 ### Opções
-
 ```bash
 appdisk -h                    # Mostra ajuda
 appdisk -d <nível>           # Define profundidade máxima
@@ -82,17 +84,17 @@ appdisk -o <arquivo.json>     # Exporta resultados para JSON
 | Backspace | Volta ao diretório anterior |
 | s | Alterna modo de ordenação (tamanho/nome/data) |
 | h | Mostra/oculta arquivos ocultos |
+| d | Deleta arquivo/diretório selecionado (com confirmação) |
 | q | Sai do programa |
 
 ## Desenvolvimento
 
 ### Pré-requisitos
-
 - Rust 1.75 ou superior
 - Cargo
+- (Opcional) Docker para construção de container
 
 ### Compilação
-
 ```bash
 # Clone o repositório
 git clone https://github.com/sposito88/appdisk.git
@@ -105,8 +107,18 @@ cargo build
 cargo build --release
 ```
 
-### Testes
+### Gerando pacote .deb
+```bash
+# Instale cargo-deb
+cargo install cargo-deb
 
+# Gere o pacote
+cargo deb
+
+# O pacote será gerado em target/debian/
+```
+
+### Testes
 ```bash
 cargo test
 ```
@@ -116,10 +128,17 @@ cargo test
 Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar pull requests.
 
 1. Fork o projeto
-2. Crie sua branch de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
+2. Crie sua branch de feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
+
+## Segurança
+
+- A função de deleção sempre pede confirmação
+- Arquivos e diretórios são verificados antes da deleção
+- Permissões são respeitadas
+- Histórico de navegação é mantido
 
 ## Licença
 
@@ -135,3 +154,4 @@ Projeto: [https://github.com/sposito88/appdisk](https://github.com/sposito88/app
 
 - Inspirado no [NCDU](https://dev.yorhel.nl/ncdu)
 - Construído com [Ratatui](https://github.com/ratatui-org/ratatui)
+- Comunidade Rust

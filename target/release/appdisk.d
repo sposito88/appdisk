@@ -1,0 +1,1 @@
+/l/disk0/asposito/Documentos/scripts/ncdu-new/target/release/appdisk: /l/disk0/asposito/Documentos/scripts/ncdu-new/src/app.rs /l/disk0/asposito/Documentos/scripts/ncdu-new/src/main.rs /l/disk0/asposito/Documentos/scripts/ncdu-new/src/scanner.rs /l/disk0/asposito/Documentos/scripts/ncdu-new/src/ui.rs

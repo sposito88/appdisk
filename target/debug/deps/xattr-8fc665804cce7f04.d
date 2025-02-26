@@ -1,0 +1,11 @@
+/l/disk0/asposito/Documentos/scripts/ncdu-new/target/debug/deps/libxattr-8fc665804cce7f04.rmeta: /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/lib.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/error.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/mod.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/util.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/linux_macos.rs
+
+/l/disk0/asposito/Documentos/scripts/ncdu-new/target/debug/deps/libxattr-8fc665804cce7f04.rlib: /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/lib.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/error.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/mod.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/util.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/linux_macos.rs
+
+/l/disk0/asposito/Documentos/scripts/ncdu-new/target/debug/deps/xattr-8fc665804cce7f04.d: /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/lib.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/error.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/mod.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/util.rs /l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/linux_macos.rs
+
+/l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/lib.rs:
+/l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/error.rs:
+/l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/mod.rs:
+/l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/util.rs:
+/l/disk0/asposito/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xattr-1.4.0/src/sys/linux_macos.rs:

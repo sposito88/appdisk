@@ -1,0 +1,3 @@
+cargo:rustc-env=CARGO_DEB_DEFAULT_TARGET=x86_64-unknown-linux-gnu
+cargo:rerun-if-env-changed=TARGET
+cargo:rerun-if-changed=build.rs
